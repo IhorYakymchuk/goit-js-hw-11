@@ -1,0 +1,148 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+        Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #fafafa;
+    color: #212121;
+    line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.search {
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    z-index: 100;
+    display: flex;
+    width: 100%;
+    height: 50px;
+    background-color: rgb(63, 70, 97);
+    box-shadow: 0px 0px 10px gray;
+}
+
+.search__container {
+    width: 500px;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+}
+
+.search-form__input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid grey;
+    float: left;
+    width: 80%;
+    background: #f1f1f1;
+    border-radius: 6px 0 0 6px;
+}
+
+.search__btn {
+    float: left;
+    width: 20%;
+    padding: 10px;
+    background: blue;
+    color: white;
+    font-size: 17px;
+    border: 1px solid grey;
+    border-left: none;
+   
+    cursor: pointer;
+    border-radius: 0 6px 6px 0;
+}
+
+.search__btn:hover {
+    background: #02090f;
+}
+
+.gallery {
+    padding-top: 70px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 10px;
+    position: relative;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.info {
+    display: flex;
+    height: 80px;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.gallery__link {
+    display: block;
+    text-decoration: none;
+}
+
+.photo-card {
+    border-radius: 0 0 6px 6px;
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+        0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+
+.info-item {
+    color: #212121;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.gallery__img {
+    width: 100%;
+    height: 250px;
+}
+
+
+.load-more {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    cursor: pointer;
+    border-radius: 6px;
+    padding: 10px 32px;
+    min-width: 200px;
+    border: 0;
+    transition-property: background-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    background-color: blue;
+    color: white;
+}
+
+.load-more.is-hidden {
+    display: none;
+}
+
