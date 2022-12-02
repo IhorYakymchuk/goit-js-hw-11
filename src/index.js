@@ -43,7 +43,14 @@ function onSearchForm(evt) {
         return Notify.failure(
           'Sorry, there are no images matching your search query. Please try again.'
         );
-      } else {
+      }
+      if (data.totalHits < 41) {
+         renderList(data);
+      refs.loadMoreBtn.classList.add('is-hidden');
+      Notify.success(`Hooray! We found ${data.totalHits} images.`);
+      Notify.info(`We're sorry, but you've reached the end of search results.`);
+      return;
+    } else {
         renderList(data);
         Notify.success(`Hooray! We found ${data.totalHits} images.`);
         setTimeout(() => {
