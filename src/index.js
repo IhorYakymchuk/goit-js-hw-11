@@ -44,7 +44,7 @@ function onSearchForm(evt) {
           'Sorry, there are no images matching your search query. Please try again.'
         );
       }
-      if (data.totalHits < 41) {
+      if (data.totalHits < pictureApiService.per_page) {
          renderList(data);
       refs.loadMoreBtn.classList.add('is-hidden');
       Notify.success(`Hooray! We found ${data.totalHits} images.`);
